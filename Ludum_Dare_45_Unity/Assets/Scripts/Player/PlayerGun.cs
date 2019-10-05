@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class PlayerGun : MonoBehaviour
 {
-    float damage;
-    float fireRate;
+    public float damage;
+    public float fireTime;
+    public float xShootRange; //The x position to stop rotating the gun
+    public GameObject bullet;
 
-    Camera cam;
-    GameObject crosshair;
+    private float shotTimer = 0;
+
+    private Camera cam;
+    private GameObject crosshair;
+    private GameObject barrel;
+    
     // Start is called before the first frame update
     void Start()
     {
         cam = Camera.main;
         crosshair = GameObject.Find("Crosshair");
+        barrel = transform.Find("Barrel").gameObject;
         Cursor.visible = false;
     }
 
@@ -23,16 +30,29 @@ public class PlayerGun : MonoBehaviour
         //Find mouse location
         Vector3 mousePos = Input.mousePosition;
         mousePos = cam.ScreenToWorldPoint(mousePos);
-        mousePos.z = -1;
-        //Update crosshair
-        crosshair.transform.position = mousePos;
-        Debug.Log(mousePos);
         mousePos.z = 0;
 
-        //find the angle player gun should be facing
-        Vector2 lookDir = transform.position - mousePos;
+        //Update crosshair
+        crosshair.transform.position = mousePos;
 
-        //Clamp it to a certain range so that you can't shoot backwards
-        //change the angle
+        //find the angle player gun should be facing
+        if (mousePos.x >= xShootRange)
+        {
+            barrel.transform.right = mousePos - barrel.transform.position;
+        }
+
+        handleShooting();
+    }
+
+    private void handleShooting()
+    {
+        shotTimer += Time.deltaTime;
+        if (shotTimer >= fireTime && Input.GetMouseButton(0))
+        {
+            shotTimer = 0;
+            //Shoot a bullet
+            Debug.Log(barrel.transform.rotation.eulerAngles);
+            Instantiate(bullet, transform.position, barrel.transform.rotation);
+        }
     }
 }
