@@ -155,7 +155,7 @@ MonoBehaviour:
   attackRate: 0.5
   attackRange: 1
   movementRange: 1
-  speed: 0.05
+  speed: 0.5
   bullet: {fileID: 622649067270377698, guid: 6583c9a577fee2a488e54a12a3cbd7d7, type: 3}
 --- !u!212 &16990038
 SpriteRenderer:
@@ -341,7 +341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 444535506}
   - component: {fileID: 444535505}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 682272798}
   - component: {fileID: 682272799}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682272797}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 444535506}
