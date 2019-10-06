@@ -31,7 +31,7 @@ public class GunBasic : MonoBehaviour
         //find the angle player gun should be facing
         if (mousePos.x >= xShootRange)
         {
-            transform.right = mousePos - transform.position;
+            transform.right = mousePos - gunTip.transform.position;
         }
 
         handleShooting();
