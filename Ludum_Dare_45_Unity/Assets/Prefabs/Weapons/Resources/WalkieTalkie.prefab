@@ -48,7 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scriptLessCrosshair: {fileID: 6162564463857816993, guid: ff9d1d42cfb3dca4dac813ae8dc1c97c,
     type: 3}
-  attackAOE: {fileID: 0}
+  attackAOE: {fileID: 7743921094096654782, guid: 1293161c59725c646ae3a2a1e1e169f1,
+    type: 3}
 --- !u!1 &4528989472160850709
 GameObject:
   m_ObjectHideFlags: 0
