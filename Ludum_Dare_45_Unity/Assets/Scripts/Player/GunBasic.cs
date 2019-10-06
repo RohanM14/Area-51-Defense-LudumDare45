@@ -28,7 +28,6 @@ public class GunBasic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Switch complete");
 
         //grabs mouse position from crosshair
         mousePos = crosshair.transform.position;
@@ -41,8 +40,6 @@ public class GunBasic : MonoBehaviour
 
         shooting = Input.GetMouseButton(0);
 
-        Debug.Log("GetMouseButton");
-        Debug.Log(shooting);
 
         handleShooting();
     }
@@ -53,7 +50,6 @@ public class GunBasic : MonoBehaviour
         {
             shotTimer = 0;
             //Shoot a bullet
-            Debug.Log(transform.rotation.eulerAngles);
             Instantiate(bullet, gunTip.transform.position, transform.rotation);
         }
         shotTimer += Time.deltaTime;

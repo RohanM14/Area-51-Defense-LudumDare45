@@ -27,20 +27,6 @@ public class PlayerGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Find mouse location
-        Vector3 mousePos = Input.mousePosition;
-        mousePos = cam.ScreenToWorldPoint(mousePos);
-        mousePos.z = 0;
-
-        //Update crosshair
-        crosshair.transform.position = mousePos;
-
-        //find the angle player gun should be facing
-        if (mousePos.x >= xShootRange)
-        {
-            barrel.transform.right = mousePos - barrel.transform.position;
-        }
-
         handleShooting();
     }
 
@@ -51,7 +37,6 @@ public class PlayerGun : MonoBehaviour
         {
             shotTimer = 0;
             //Shoot a bullet
-            Debug.Log(barrel.transform.rotation.eulerAngles);
             Instantiate(bullet, transform.position, barrel.transform.rotation);
         }
     }
