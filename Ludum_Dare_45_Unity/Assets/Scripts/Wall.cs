@@ -8,7 +8,7 @@ public class Wall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -20,15 +20,18 @@ public class Wall : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject collider = collision.gameObject;
-        if (collider.tag == "Bullet")
+        Debug.Log("Detected collision");
+        if (collider.tag == "BasicBullet")
         {
             Bullet bullet = collider.GetComponent<Bullet>();
-            health -= bullet.damage;
+            health -= 1;
             //May need to add some sort of Coroutine in the bullet for destroy animations
-            Destroy(bullet.gameObject);
+            Destroy(collider);
+            Debug.Log(health);
             if (health <= 0)
             {
-                //die
+                Debug.Log("Wall Destroyed");
+                Destroy(gameObject);
             }
 
         }

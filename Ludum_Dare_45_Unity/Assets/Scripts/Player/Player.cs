@@ -29,10 +29,11 @@ public class Player : MonoBehaviour
         //Update crosshair
         crosshair.transform.position = mousePos;
 
-        spawnGun("1", gun1);        
+        spawnGun("1", "tempGun");
+        spawnGun("2", "tempAR");
     }
 
-    void spawnGun(string key, GameObject gunType) // removes all of the guns from the player and spawns a new one
+    void spawnGun(string key, string gunType) // removes all of the guns from the player and spawns a new one
     {
         if (Input.GetKey(key))
         {
@@ -43,7 +44,7 @@ public class Player : MonoBehaviour
             }
 
             // creates gun
-            Instantiate(gunType, transform);
+            Instantiate(Resources.Load(gunType), transform);
         }
         
     }
