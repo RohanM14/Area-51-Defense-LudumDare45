@@ -754,7 +754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun1: {fileID: 5418653138633561689, guid: 35b28653c877e7846916e1fc10f3c557, type: 3}
-  crosshair: {fileID: 3266272997466628050, guid: 67df5e8de19c94f4ba77083769b4d5fd,
+  crosshair: {fileID: 7903015985771328629, guid: 514fbf8409c4f34459876cde5df2fd35,
     type: 3}
 --- !u!4 &1107213137
 Transform:

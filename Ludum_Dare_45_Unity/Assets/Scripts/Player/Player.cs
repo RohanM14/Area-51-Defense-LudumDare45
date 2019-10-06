@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
         Instantiate(crosshair);
         cam = Camera.main;
         Cursor.visible = false;
-        crosshair = GameObject.Find("Crosshair(Clone)");
+        crosshair = GameObject.Find("Crosshair 1(Clone)");
     }
 
     // Update is called once per frame
