@@ -6,7 +6,7 @@ public class UpgradeManager : MonoBehaviour
 {
     int currentWave;
     int money;
-    int[] upgrades = new int[6];
+    int[] upgrades;
     int wallLevel;
 
     // Start is called before the first frame update
@@ -15,7 +15,7 @@ public class UpgradeManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         currentWave = 1;
         money = 0;
-        upgrades = new int[6];
+        upgrades = new int[9];
         wallLevel = 0;
     }
 
@@ -24,15 +24,6 @@ public class UpgradeManager : MonoBehaviour
         return upgrades;
     }
 
-    public int getWall()
-    {
-        return wallLevel;
-    }
-
-    public void upgradeWall()
-    {
-        wallLevel++;
-    }
     public void upgrade(int slot)
     {
         upgrades[slot] = upgrades[slot] + 1;
