@@ -49,7 +49,7 @@ public class Enemy : MonoBehaviour
         {
             shotTimer = 0;
             //Shoot a bullet
-            Instantiate(bullet, transform.position, Quaternion.Euler(0,0,transform.rotation.eulerAngles.z-180), gameObject.transform).tag = "BasicBullet";
+            Instantiate(bullet, transform.position, Quaternion.Euler(0,0,transform.rotation.eulerAngles.z-180)).tag = "BasicBullet";
             
         }
     }
