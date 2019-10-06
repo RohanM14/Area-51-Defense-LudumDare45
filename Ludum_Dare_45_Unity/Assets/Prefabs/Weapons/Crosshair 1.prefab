@@ -170,7 +170,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7903015985771328635}
   - component: {fileID: 7903015985771328634}
-  - component: {fileID: 7903015985771328628}
   m_Layer: 0
   m_Name: Crosshair 1
   m_TagString: Untagged
@@ -242,22 +241,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7903015985771328628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7903015985771328629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 985bbb1d2eaf58d4090995b773c38a33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  normalSprite: {fileID: 21300000, guid: 0d5a11d801c0f7a4fa7efe5acaf8dd2c, type: 3}
-  airraidSprite: {fileID: 21300000, guid: 745685f61f889dc42858cfa382774c06, type: 3}
-  airraidSize: 0.2
-  normalSpriteSize: 0.02
 --- !u!1 &7903015986506640024
 GameObject:
   m_ObjectHideFlags: 0

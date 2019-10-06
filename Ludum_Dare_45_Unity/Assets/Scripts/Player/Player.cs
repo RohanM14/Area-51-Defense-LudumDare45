@@ -6,18 +6,23 @@ public class Player : MonoBehaviour
 {
     public GameObject gun1;
     public GameObject crosshair;
+    public float airraidSize;
+    public float normalSpriteSize;
+    public Sprite normalSprite;
+    public Sprite airraidSprite;
 
     private Camera cam;
     private float cooldownAOE; //Stored in seconds
+    private string currentWeapon;
 
     // Start is called before the first frame update
     void Start()
     {
         cooldownAOE = 0;
-        Instantiate(crosshair);
+        crosshair = Instantiate(crosshair);
         cam = Camera.main;
         Cursor.visible = false;
-        crosshair = GameObject.Find("Crosshair 1(Clone)");
+        crosshair.GetComponent<SpriteRenderer>().sprite = normalSprite;
     }
 
     // Update is called once per frame
@@ -38,9 +43,12 @@ public class Player : MonoBehaviour
         //Update crosshair
         crosshair.transform.position = mousePos;
 
-        spawnGun("1", "tempGun");
-        spawnGun("2", "tempAR");
-        spawnGun("3", "WalkieTalkie");
+        changeGun("1", "tempGun");
+        changeGun("2", "tempAR");
+        changeGun("3", "WalkieTalkie");
+        if ((currentWeapon == "3") && (Input.GetMouseButtonDown(0))) {
+            spawnGun("1", "tempGun");
+        }
     }
 
     public void activateAOE()
@@ -53,19 +61,39 @@ public class Player : MonoBehaviour
         return cooldownAOE <= 0.001;
     }
 
-    void spawnGun(string key, string gunType) // removes all of the guns from the player and spawns a new one
+    void changeGun(string key, string gunType) // removes all of the guns from the player and spawns a new one
     {
         if (Input.GetKey(key))
         {
-            // destroys gun
-            foreach (Transform child in transform)
-            {
-                Destroy(child.gameObject);
-            }
-
-            // creates gun
-            Instantiate(Resources.Load(gunType), transform);
+            spawnGun(key, gunType);
         }
         
+        
+    }
+
+    void spawnGun(string key, string gunType)
+    {
+        // destroys gun
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        // creates weapon
+        Instantiate(Resources.Load(gunType), transform);
+
+        currentWeapon = key;
+
+        if (currentWeapon == "3")
+        {
+            crosshair.GetComponent<SpriteRenderer>().sprite = airraidSprite;
+            crosshair.transform.localScale = new Vector3(airraidSize, airraidSize, airraidSize);
+        }
+        if (currentWeapon == "1" || currentWeapon == "2")
+        {
+            crosshair.GetComponent<SpriteRenderer>().sprite = normalSprite;
+            crosshair.transform.localScale = new Vector3(normalSpriteSize, normalSpriteSize, normalSpriteSize);
+        }
+
     }
 }
