@@ -23,7 +23,7 @@ public class GunBasic : MonoBehaviour
     void Start()
     {
         crosshair = GameObject.Find("Crosshair 1(Clone)");
-        shotTimer = fireTime;
+        shotTimer = fireTime - 0.25f; // Delay shooting for 0.25 seconds when switching weapons
     }
 
     // Update is called once per frame
@@ -46,6 +46,7 @@ public class GunBasic : MonoBehaviour
 
     private void handleShooting()
     {
+        Debug.Log(shotTimer);
         if (shotTimer >= fireTime && shooting)
         {
             shotTimer = 0;

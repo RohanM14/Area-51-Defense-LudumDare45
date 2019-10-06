@@ -46,9 +46,6 @@ public class Player : MonoBehaviour
         changeGun("1", "tempGun");
         changeGun("2", "tempAR");
         changeGun("3", "WalkieTalkie");
-        if ((currentWeapon == "3") && (Input.GetMouseButtonDown(0))) {
-            spawnGun("1", "tempGun");
-        }
     }
 
     public void activateAOE()
@@ -71,7 +68,7 @@ public class Player : MonoBehaviour
         
     }
 
-    void spawnGun(string key, string gunType)
+    public void spawnGun(string key, string gunType)
     {
         // destroys gun
         foreach (Transform child in transform)
