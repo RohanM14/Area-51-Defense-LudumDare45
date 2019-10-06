@@ -21,7 +21,7 @@ public class GunBasic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        crosshair = GameObject.Find("Crosshair(Clone)");
+        crosshair = GameObject.Find("Crosshair 1(Clone)");
         shotTimer = fireTime;
     }
 
