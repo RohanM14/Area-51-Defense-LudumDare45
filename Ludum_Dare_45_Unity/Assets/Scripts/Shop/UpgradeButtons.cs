@@ -7,6 +7,10 @@ public class UpgradeButtons : MonoBehaviour
 {
 
     public Button button;
+    public GameObject level;
+    public Sprite sprite1;
+    public Sprite sprite2;
+    public Sprite sprite3;
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +25,18 @@ public class UpgradeButtons : MonoBehaviour
         if (text.text.Equals("$100"))
         {
             text.text = "$300";
+            level.GetComponent<SpriteRenderer>().sprite = sprite1;
         }
         else if (text.text.Equals("$300"))
         {
             text.text = "$500";
-            button.interactable =  false;
+            level.GetComponent<SpriteRenderer>().sprite = sprite2;
+        }
+        else if (text.text.Equals("$500"))
+        {
+            text.text = "Max";
+            level.GetComponent<SpriteRenderer>().sprite = sprite3;
+            button.interactable = false;
         }
     }
 

@@ -5,23 +5,13 @@ using UnityEngine;
 public class UpgradeManager : MonoBehaviour
 {
     int money;
-    int[] upgrades = new int[6];
-    int wallLevel;
+    int[] upgrades = new int[9];
 
     public int[] getUpgrades()
     {
         return upgrades;
     }
 
-    public int getWall()
-    {
-        return wallLevel;
-    }
-
-    public void upgradeWall()
-    {
-        wallLevel++;
-    }
     public void upgrade(int slot)
     {
         upgrades[slot] = upgrades[slot] + 1;
