@@ -46,7 +46,6 @@ public class GunBasic : MonoBehaviour
 
     private void handleShooting()
     {
-        Debug.Log(shotTimer);
         if (shotTimer >= fireTime && shooting)
         {
             shotTimer = 0;

@@ -7,10 +7,15 @@ public class Airplane : MonoBehaviour
     public float speed;
     public GameObject crosshair;
     public GameObject bomb;
+    private Quaternion bombAngle;
+    private bool droppedYet = false;
+    private Player player;
+
     // Start is called before the first frame update
     void Start()
     {
         Destroy(gameObject, 10); // Kill self after 10 seconds
+        crosshair = GameObject.Find("ScriptLessCrosshair(Clone)").gameObject;
     }
 
     // Update is called once per frame
@@ -19,11 +24,15 @@ public class Airplane : MonoBehaviour
         //Move to the right
         transform.Translate(Vector2.right * Time.deltaTime * speed);
 
+
+
         //Drop bomb
-        if (transform.position.x >= crosshair.transform.position.x)
+        if (!droppedYet && transform.position.x >= crosshair.transform.position.x - 1)
         {
-            //Bomb that shit
-            //Instantiate(bomb, transform.position, transform.rotation); 
+            droppedYet = true;
+            Instantiate(bomb, transform.position, transform.rotation); 
         }
     }
+
+    
 }
