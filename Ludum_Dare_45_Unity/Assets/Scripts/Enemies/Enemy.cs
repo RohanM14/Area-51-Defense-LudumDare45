@@ -10,6 +10,11 @@ public class Enemy : MonoBehaviour
     public float attackRange;
     public float movementRange;
     public float speed;
+    public class damage
+    {
+        public float attackDamage;
+    }
+
     private float shotTimer = 0;
     public GameObject bullet;
     float wallCoord = -6.85F;
@@ -45,7 +50,8 @@ public class Enemy : MonoBehaviour
             shotTimer = 0;
             //Shoot a bullet
             Debug.Log(transform.rotation);
-            Instantiate(bullet, transform.position, Quaternion.Euler(0,0,transform.rotation.eulerAngles.z-180));
+            Instantiate(bullet, transform.position, Quaternion.Euler(0,0,transform.rotation.eulerAngles.z-180), gameObject.transform).tag = "BasicBullet";
+            
         }
     }
 }
