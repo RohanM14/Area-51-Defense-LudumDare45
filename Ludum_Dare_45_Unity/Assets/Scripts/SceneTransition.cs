@@ -7,7 +7,7 @@ public class SceneTransition : MonoBehaviour
 {
     private Transform flash;
     private SpriteRenderer fadeOutUIImage;
-    private float fadeSpeed = 1;
+    private float fadeSpeed = 5f;
     private Quaternion endRotation = Quaternion.Euler(0, 0, 0);
     public enum FadeDirection
     {
@@ -20,12 +20,7 @@ public class SceneTransition : MonoBehaviour
     {
         flash = transform.Find("Flash");
         fadeOutUIImage = transform.Find("FadeSprite").gameObject.GetComponent<SpriteRenderer>();
-
-        //Rotate in our boy
-
-        // wait and then fade
-        StartCoroutine(Fade(FadeDirection.Out));
-        //StartCoroutine(RotateIn());
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
@@ -36,17 +31,32 @@ public class SceneTransition : MonoBehaviour
 
     public void changeScene(string sceneName)
     {
-        StartCoroutine(Fade(FadeDirection.Out));
+        StartCoroutine(RotateIn());
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        StartCoroutine(waitTillRotate(sceneName));
+    }
 
+    private IEnumerator waitTillRotate(string sceneName)
+    {
+        yield return new WaitWhile(() => transform.rotation.eulerAngles.z != 0);
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(FadeAndLoadScene(FadeDirection.Out,sceneName));
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        StartCoroutine(Fade(FadeDirection.In));
+        flash.localScale = new Vector3(0, 0, 0);
+        transform.rotation = Quaternion.Euler(0, 0, 90);
     }
 
     private IEnumerator RotateIn()
     {
         while (transform.rotation.z != 0)
         {
-            Debug.Log(transform.rotation);
-            transform.rotation = Quaternion.Lerp(transform.rotation, endRotation, 0.001f);
-            if (transform.rotation.z < 4) transform.rotation = endRotation;
+            transform.rotation = Quaternion.Lerp(transform.rotation, endRotation, 0.1f);
+            if (transform.rotation.eulerAngles.z < 3) transform.rotation = endRotation;
             yield return null;
         }
     }
@@ -54,14 +64,14 @@ public class SceneTransition : MonoBehaviour
     #region FADE
     private IEnumerator Fade(FadeDirection fadeDirection)
     {
-        float alpha = (fadeDirection == FadeDirection.Out) ? 1 : 0;
+        float alpha = (fadeDirection == FadeDirection.Out) ? 0 : 1;
         float scale = 0;
         float scaleEndValue = 50;
-        float fadeEndValue = (fadeDirection == FadeDirection.Out) ? 0 : 1;
+        float fadeEndValue = (fadeDirection == FadeDirection.Out) ? 1 : 0;
         if (fadeDirection == FadeDirection.Out)
         {
             //transparent >> flash >> white screen
-            while (scale <= scaleEndValue)
+            while (scale < scaleEndValue)
             {
                 scale = Mathf.Lerp(scale, scaleEndValue, 0.01f);
                 if (scale >= 0.8 * scaleEndValue) scale = scaleEndValue;
@@ -74,8 +84,9 @@ public class SceneTransition : MonoBehaviour
         else
         {
             fadeOutUIImage.enabled = true;
-            while (alpha <= fadeEndValue)
+            while (alpha >= fadeEndValue)
             {
+                Debug.Log("alpha:" + alpha);
                 SetColorImage(ref alpha, fadeDirection);
                 yield return null;
             }
@@ -91,8 +102,10 @@ public class SceneTransition : MonoBehaviour
     private void SetColorImage(ref float alpha, FadeDirection fadeDirection)
     {
         fadeOutUIImage.color = new Color(fadeOutUIImage.color.r, fadeOutUIImage.color.g, fadeOutUIImage.color.b, alpha);
-        alpha += Time.deltaTime * (1.0f / fadeSpeed) * ((fadeDirection == FadeDirection.Out) ? -1 : 1);
+        alpha += Time.deltaTime * (1.0f / fadeSpeed) * ((fadeDirection == FadeDirection.Out) ? 1 : -1);
     }
     #endregion
+
+
 
 }
