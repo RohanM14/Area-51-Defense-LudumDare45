@@ -26,7 +26,7 @@ public class Wall : MonoBehaviour
             Bullet bullet = collider.GetComponent<Bullet>();
             health -= 1;
             //May need to add some sort of Coroutine in the bullet for destroy animations
-            Destroy(bullet);
+            Destroy(collider);
             Debug.Log(health);
             if (health <= 0)
             {
