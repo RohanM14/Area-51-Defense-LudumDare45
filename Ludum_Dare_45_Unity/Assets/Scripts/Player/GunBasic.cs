@@ -10,6 +10,7 @@ public class GunBasic : MonoBehaviour
     public GameObject bullet;
     public GameObject gunTip;
 
+
     private float shotTimer;
 
     private Vector3 mousePos;
@@ -39,7 +40,6 @@ public class GunBasic : MonoBehaviour
         }
 
         shooting = Input.GetMouseButton(0);
-
 
         handleShooting();
     }
