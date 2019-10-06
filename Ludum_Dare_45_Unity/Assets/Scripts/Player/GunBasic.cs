@@ -10,21 +10,26 @@ public class GunBasic : MonoBehaviour
     public GameObject bullet;
     public GameObject gunTip;
 
-    private float shotTimer = 0;
+    private float shotTimer;
 
     private Vector3 mousePos;
 
     private GameObject crosshair;
 
+    private bool shooting;
+
     // Start is called before the first frame update
     void Start()
     {
         crosshair = GameObject.Find("Crosshair(Clone)");
+        shotTimer = fireTime;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("Switch complete");
+
         //grabs mouse position from crosshair
         mousePos = crosshair.transform.position;
 
@@ -34,18 +39,23 @@ public class GunBasic : MonoBehaviour
             transform.right = mousePos - gunTip.transform.position;
         }
 
+        shooting = Input.GetMouseButton(0);
+
+        Debug.Log("GetMouseButton");
+        Debug.Log(shooting);
+
         handleShooting();
     }
 
     private void handleShooting()
     {
-        shotTimer += Time.deltaTime;
-        if (shotTimer >= fireTime && Input.GetMouseButton(0))
+        if (shotTimer >= fireTime && shooting)
         {
             shotTimer = 0;
             //Shoot a bullet
             Debug.Log(transform.rotation.eulerAngles);
             Instantiate(bullet, gunTip.transform.position, transform.rotation);
         }
+        shotTimer += Time.deltaTime;
     }
 }
