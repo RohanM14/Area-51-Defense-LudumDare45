@@ -57,9 +57,19 @@ public class EnemySpawnManager : MonoBehaviour
     private void spawnEnemy(GameObject enemyToSpawn)
     {
         Vector3 positionToSpawn = transform.position;
-        positionToSpawn.y += Random.Range(0f, 5f);
+        positionToSpawn.y += Random.Range(0f, 3.9f) + 1.1f;
         GameObject enemy = Instantiate(enemyToSpawn, positionToSpawn, transform.rotation);
+
+        //Adjust sorting order
         enemy.GetComponent<SpriteRenderer>().sortingOrder = -(int)(positionToSpawn.y * 10);
+
+        //Adjust scale for perspective
+        //0.5 from lowest -- 0.25 to highest
+        // slope is (0.25-0.5)/(0--3.9) = -0.0641
+        // y=mx+b, b = 0.25
+        float scale = -0.0641f * positionToSpawn.y + 0.25f;
+        enemy.transform.localScale = new Vector3(scale, scale, 1);
+
     }
 
 }
