@@ -17,25 +17,29 @@ public class EnemySpawnManager : MonoBehaviour
     {
         timeBeforeNextSpawn = new float[enemyPrefabs.Length];
         enemySpawnTimers = new float[enemyPrefabs.Length];
+        for (int i = 0; i < enemyPrefabs.Length; i++)
+        {
+            timeBeforeNextSpawn[i] = Random.Range(0f, 2f);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("yuuuuh");
         switch (wave)
         {
             case 1:
+                Debug.Log("here we go");
                 //3 grunts for first level
                 for (int i = 0; i < enemyPrefabs.Length; i++)
                 {
-                    if (enemySpawnTimers[i] >= timeBeforeNextSpawn[i])
+                    if (enemySpawnTimers[i] >= timeBeforeNextSpawn[i] && wave1[i] > 0)
                     {
-                        if (wave1[i] > 0)
-                        { 
-                            spawnEnemy(enemyPrefabs[i]);
-                            wave1[i]--;
-                        }
-                        
+                        spawnEnemy(enemyPrefabs[i]);
+                        wave1[i]--;
+                        timeBeforeNextSpawn[i] = Random.Range(5f, Random.Range(5f,10f));
+                        enemySpawnTimers[i] = 0;
                     }
                     enemySpawnTimers[i] += Time.deltaTime;
                 }
@@ -54,7 +58,9 @@ public class EnemySpawnManager : MonoBehaviour
 
     private void spawnEnemy(GameObject enemyToSpawn)
     {
-
+        Vector3 positionToSpawn = transform.position;
+        positionToSpawn.y += Random.Range(0, 5);
+        Instantiate(enemyToSpawn, positionToSpawn, transform.rotation);
     }
 
 }
