@@ -57,7 +57,6 @@ public class Player : MonoBehaviour
         }
 
 
-        Debug.Log(upgrades[0]);
 
     }
 

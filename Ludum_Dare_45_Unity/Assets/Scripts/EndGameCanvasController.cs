@@ -8,6 +8,7 @@ public class EndGameCanvasController : MonoBehaviour
     {
         if (won)
         {
+            UpgradeManager.currentWave += 1;
             StartCoroutine(GlideIn(transform.Find("WinScreen").gameObject, 1));
             yield return null;
         }

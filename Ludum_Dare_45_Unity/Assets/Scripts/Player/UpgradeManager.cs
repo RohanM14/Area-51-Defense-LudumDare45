@@ -5,7 +5,7 @@ using UnityEngine;
 public class UpgradeManager : MonoBehaviour
 {
 
-    int currentWave;
+    public static int currentWave;
     public static int money;
     public static int[] upgrades = new int[9];
     private static int gun1 = 10;

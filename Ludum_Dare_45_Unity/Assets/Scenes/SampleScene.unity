@@ -444,6 +444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 7799817948629239968, guid: 77d39901a73cb5c4abce7d12c774ac09, type: 3}
+  - {fileID: 8716383045153507555, guid: ed318384a66456c4f90c917a8204dfd2, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,6 +1015,12 @@ MonoBehaviour:
   normalSpriteSize: 0.02
   normalSprite: {fileID: 21300000, guid: 0d5a11d801c0f7a4fa7efe5acaf8dd2c, type: 3}
   airraidSprite: {fileID: 21300000, guid: 745685f61f889dc42858cfa382774c06, type: 3}
+  gunOptions:
+  - tempRock
+  - tempGun
+  - tempAR
+  - tempMinigun
+  upgrades: 
 --- !u!212 &1107213138
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1654,7 +1661,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2076673268
 GameObject:
@@ -1863,7 +1870,7 @@ PrefabInstance:
     - target: {fileID: 4458293236342861403, guid: 2ae4af7189fd1184b805ec95d3287b5d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4458293236342861403, guid: 2ae4af7189fd1184b805ec95d3287b5d,
         type: 3}
