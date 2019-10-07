@@ -9,7 +9,7 @@ public class UpgradeManager : MonoBehaviour
     int currentWave;
     public static int money;
     public static string gun1Level = "tempRock";
-    int[] upgrades;
+    int[] upgrades = new int[9];
     private static int gun1 = 10;
 
     // Start is called before the first frame update
