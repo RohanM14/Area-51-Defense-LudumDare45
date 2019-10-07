@@ -13,6 +13,8 @@ public class GunBasic : MonoBehaviour
     public bool isRock;
     public string fireAudio;
 
+    public Player playerHand;
+
 
     private float shotTimer;
 
@@ -25,7 +27,8 @@ public class GunBasic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        crosshair = GameObject.Find("Crosshair 1(Clone)");
+        playerHand = GameObject.Find("Player Hand").GetComponent<Player>();
+        crosshair = playerHand.crosshair;
         shotTimer = fireTime - 0.25f; // Delay shooting for 0.25 seconds when switching weapons
     }
 

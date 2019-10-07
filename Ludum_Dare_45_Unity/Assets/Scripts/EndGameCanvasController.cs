@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EndGameCanvasController : MonoBehaviour
 {
+    public GameObject crosshair;
+
     public IEnumerator endGame(bool won)
     {
         if (won)
@@ -21,7 +23,7 @@ public class EndGameCanvasController : MonoBehaviour
     private IEnumerator GlideIn(GameObject screen, int direction)
     {
         Cursor.visible = true;
-        GameObject.Find("Crosshair 1(Clone)").SetActive(false);
+        crosshair.SetActive(false);
         RectTransform rectT = screen.GetComponent<RectTransform>();
         while (rectT.localPosition.y != 0f)
         {

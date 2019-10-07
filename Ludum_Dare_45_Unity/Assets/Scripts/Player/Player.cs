@@ -22,7 +22,6 @@ public class Player : MonoBehaviour
     {
         upgrades = UpgradeManager.GetUpgrades();
         cooldownAOE = 0;
-        crosshair = Instantiate(crosshair);
         cam = Camera.main;
         Cursor.visible = false;
         crosshair.GetComponent<SpriteRenderer>().sprite = normalSprite;

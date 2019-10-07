@@ -57,12 +57,25 @@ public class ShopManager : MonoBehaviour
                 images[num].sprite = sprites[3];
                 break;
         }
+        if (num == 0 && UpgradeManager.GetUpgrades()[num] == 3)
+            upgradeButtonsFolder.transform.Find("0").GetComponent<Button>().interactable = false;
+        if (num == 3 && UpgradeManager.GetUpgrades()[num] == 1)
+            upgradeButtonsFolder.transform.Find("3").GetComponent<Button>().interactable = false;
+        if (num == 6 && UpgradeManager.GetUpgrades()[num] == 3)
+            upgradeButtonsFolder.transform.Find("6").GetComponent<Button>().interactable = false;
+
     }
 
     public void buy(int button)
     {
         if (UpgradeManager.money >= buttonCosts[button] && UpgradeManager.GetUpgrades()[button] < 3)
         {
+            if (button == 0 && UpgradeManager.GetUpgrades()[button] == 2)
+                upgradeButtonsFolder.transform.Find("0").GetComponent<Button>().interactable = false;
+            if (button == 3 && UpgradeManager.GetUpgrades()[button] == 0)
+                upgradeButtonsFolder.transform.Find("3").GetComponent<Button>().interactable = false;
+            if (button == 6 && UpgradeManager.GetUpgrades()[button] == 2)
+                upgradeButtonsFolder.transform.Find("6").GetComponent<Button>().interactable = false;
             UpgradeManager.money -= buttonCosts[button];
             UpgradeManager.GetUpgrades()[button] += 1;
             updateGraphics(button);
