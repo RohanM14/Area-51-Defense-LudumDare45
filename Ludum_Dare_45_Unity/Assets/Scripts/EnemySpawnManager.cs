@@ -24,6 +24,7 @@ public class EnemySpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        wave = UpgradeManager.currentWave;
         enemies = new List<GameObject>();
         timeBeforeNextSpawn = new float[enemyPrefabs.Length];
         enemySpawnTimers = new float[enemyPrefabs.Length];
@@ -135,10 +136,35 @@ public class EnemySpawnManager : MonoBehaviour
         }
         else
         {
-            for (int i = 0; i < wave1.Length; i++)
+            if (wave == 1)
             {
-                if (wave1[i] > 0) finishedGame = false;
+                for (int i = 0; i < wave1.Length; i++)
+                {
+                    if (wave1[i] > 0) finishedGame = false;
+                }
             }
+            else if (wave == 2)
+            {
+                for (int i = 0; i < wave2.Length; i++)
+                {
+                    if (wave2[i] > 0) finishedGame = false;
+                }
+            }
+            else if (wave == 3)
+            {
+                for (int i = 0; i < wave3.Length; i++)
+                {
+                    if (wave3[i] > 0) finishedGame = false;
+                }
+            }
+            else
+            {
+                for (int i = 0; i < waveN.Length; i++)
+                {
+                    if (waveN[i] > 0) finishedGame = false;
+                }
+            }
+
         }
         if (finishedGame)
         {
