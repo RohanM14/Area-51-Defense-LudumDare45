@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
     public float movementRange;
     public float speed;
 
+    public EnemySpawnManager spawnManager;
+
     private float shotTimer = 0;
     private bool alive = true;
     public GameObject bullet;
@@ -77,7 +79,7 @@ public class Enemy : MonoBehaviour
 
         //Disable trigger boxes
         GetComponent<Collider2D>().enabled = false;
-
+        spawnManager.enemyDie(gameObject);
     }
 
     private void handleShooting()
