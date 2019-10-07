@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
         cam = Camera.main;
         Cursor.visible = false;
         crosshair.GetComponent<SpriteRenderer>().sprite = normalSprite;
+        spawnGun("1", UpgradeManager.gun1Level);
     }
 
     // Update is called once per frame
@@ -44,7 +45,7 @@ public class Player : MonoBehaviour
         crosshair.transform.position = mousePos;
 
         changeGun("1", UpgradeManager.gun1Level);
-        changeGun("3", "WalkieTalkie");
+        changeGun("2", "WalkieTalkie");
     }
 
     public void activateAOE()
@@ -80,12 +81,12 @@ public class Player : MonoBehaviour
 
         currentWeapon = key;
 
-        if (currentWeapon == "3")
+        if (currentWeapon == "2")
         {
             crosshair.GetComponent<SpriteRenderer>().sprite = airraidSprite;
             crosshair.transform.localScale = new Vector3(airraidSize, airraidSize, airraidSize);
         }
-        if (currentWeapon == "1" || currentWeapon == "2")
+        if (currentWeapon == "1")
         {
             crosshair.GetComponent<SpriteRenderer>().sprite = normalSprite;
             crosshair.transform.localScale = new Vector3(normalSpriteSize, normalSpriteSize, normalSpriteSize);
