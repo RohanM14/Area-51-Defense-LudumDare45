@@ -559,7 +559,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 366696737}
   level: {fileID: 1520582024}
-  upgrade: 0
   sprite1: {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
   sprite2: {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
   sprite3: {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
@@ -696,7 +695,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 456487446}
   level: {fileID: 1902281612}
-  upgrade: 0
   sprite1: {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
   sprite2: {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
   sprite3: {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
@@ -833,7 +831,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 586916075}
   level: {fileID: 1182026724}
-  upgrade: 0
   sprite1: {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
   sprite2: {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
   sprite3: {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
@@ -1197,7 +1194,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 707187682}
   level: {fileID: 221930385}
-  upgrade: 0
   sprite1: {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
   sprite2: {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
   sprite3: {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
@@ -1561,7 +1557,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 841702702}
   level: {fileID: 1941038851}
-  upgrade: 0
   sprite1: {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
   sprite2: {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
   sprite3: {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
@@ -1954,7 +1949,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1317664278}
   level: {fileID: 729884990}
-  upgrade: 0
   sprite1: {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
   sprite2: {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
   sprite3: {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
@@ -2241,7 +2235,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1571329661}
   level: {fileID: 2144704428}
-  upgrade: 0
   sprite1: {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
   sprite2: {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
   sprite3: {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
@@ -2455,7 +2448,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1729596595}
   level: {fileID: 1835020420}
-  upgrade: 0
   sprite1: {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
   sprite2: {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
   sprite3: {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
@@ -2815,7 +2807,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1908192260}
   level: {fileID: 616087272}
-  upgrade: 0
   sprite1: {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
   sprite2: {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
   sprite3: {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}

@@ -14,8 +14,6 @@ public class UpgradeButtons : MonoBehaviour
     public Sprite sprite2;
     public Sprite sprite3;
 
-    private int currentMoney;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -24,10 +22,8 @@ public class UpgradeButtons : MonoBehaviour
     }
 
     void TaskOnClick()
-    {
-        currentMoney = UpgradeManager.money;
+    { 
         Vector2 thisPosition = EventSystem.current.currentSelectedGameObject.GetComponent<Transform>().localPosition;
-        Debug.Log(thisPosition);
         if (thisPosition.y > 70F)
         {
             upgrade = 1;
@@ -65,23 +61,26 @@ public class UpgradeButtons : MonoBehaviour
             upgrade = 9;
         }
         Text text = GetComponentInChildren<Text>();
-        if (text.text.Equals("$100") && currentMoney >= 100)
+        if (text.text.Equals("$100") && UpgradeManager.money >= 100)
         {
             text.text = "$300";
-            UpgradeManager.money = currentMoney - 100;
+            UpgradeManager.money -= 100;
             level.GetComponent<Image>().sprite = sprite1;
+            UpgradeManager.upgrades[upgrade] += 1;
         }
-        else if (text.text.Equals("$300") && currentMoney >= 300)
+        else if (text.text.Equals("$300") && UpgradeManager.money >= 300)
         {
             text.text = "$500";
-            UpgradeManager.money = currentMoney - 300;
+            UpgradeManager.money -= 300;
             level.GetComponent<Image>().sprite = sprite2;
+            UpgradeManager.upgrades[upgrade] += 1;
         }
-        else if (text.text.Equals("$500") && currentMoney >= 500)
+        else if (text.text.Equals("$500") && UpgradeManager.money >= 500)
         {
             text.text = "Max";
-            UpgradeManager.money = currentMoney - 500;
+            UpgradeManager.money -= 500;
             level.GetComponent<Image>().sprite = sprite3;
+            UpgradeManager.upgrades[upgrade] += 1;
             button.interactable = false;
         }
     }
