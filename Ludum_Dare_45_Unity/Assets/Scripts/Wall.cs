@@ -22,8 +22,8 @@ public class Wall : MonoBehaviour
         GameObject collider = collision.gameObject;
         if (collider.tag == "BasicBullet")
         {
-            Bullet bullet = collider.GetComponent<Bullet>();
-            health -= 1;
+            BasicBullet bullet = collider.GetComponent<BasicBullet>();
+            health -= bullet.damage;
             //May need to add some sort of Coroutine in the bullet for destroy animations
             Destroy(collider);
             if (health <= 0)

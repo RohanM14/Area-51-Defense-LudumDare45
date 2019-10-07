@@ -9,7 +9,6 @@ public class Airplane : MonoBehaviour
     public GameObject bomb;
     private Quaternion bombAngle;
     private bool droppedYet = false;
-    private Player player;
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +22,6 @@ public class Airplane : MonoBehaviour
     {
         //Move to the right
         transform.Translate(Vector2.right * Time.deltaTime * speed);
-
-
 
         //Drop bomb
         if (!droppedYet && transform.position.x >= crosshair.transform.position.x - 1)

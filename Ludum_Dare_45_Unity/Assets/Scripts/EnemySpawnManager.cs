@@ -26,11 +26,9 @@ public class EnemySpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("yuuuuh");
         switch (wave)
         {
             case 1:
-                Debug.Log("here we go");
                 //3 grunts for first level
                 for (int i = 0; i < enemyPrefabs.Length; i++)
                 {
