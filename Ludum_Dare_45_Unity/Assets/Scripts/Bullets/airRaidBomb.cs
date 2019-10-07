@@ -7,10 +7,14 @@ public class airRaidBomb : MonoBehaviour
     public GameObject crosshair;
     public GameObject explosion;
     public float speed;
+    AudioSource audioSource;
     
     // Start is called before the first frame update
     void Start()
     {
+        // finds audio component
+        audioSource = GetComponent<AudioSource>();
+
         // finds the crosshair target
         crosshair = GameObject.Find("ScriptLessCrosshair(Clone)").gameObject;
 
@@ -30,8 +34,12 @@ public class airRaidBomb : MonoBehaviour
         GameObject collider = collision.gameObject;
         if (collider.tag == "Target")
         {
-            Destroy(collider);
             Instantiate(explosion, transform.position + new Vector3(0, .5f, 0), Quaternion.Euler(Vector3.zero));
+
+            // plays boom sound hopefully
+            audioSource.Play();
+
+            Destroy(collider);
             Destroy(gameObject);
         }
     }

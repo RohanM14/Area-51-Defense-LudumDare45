@@ -56,7 +56,7 @@ public class Enemy : MonoBehaviour
 
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, -90), 0.2f);
 
-            if (transform.rotation.eulerAngles.z <= -88 && otherValues <= 10) Destroy(this); //get rid of the script
+            if (transform.rotation.eulerAngles.z <= -88 && otherValues <= 10) Destroy(this,5); //get rid of the script
         }
         
     }
@@ -71,6 +71,11 @@ public class Enemy : MonoBehaviour
     {
         //Add money
         UpgradeManager.money += cashValue;
+
+        // plays sound
+        string[] twoOptions = new string[2] { "voice_female_a_hurt_pain_01", "voice_female_b_hurt_pain_07" };
+        AudioClip audio = Resources.Load<AudioClip>(twoOptions[Random.Range(0, 2)]);
+        this.GetComponent<AudioSource>().PlayOneShot(audio);
 
         //Disable movement
         //Disable attacks

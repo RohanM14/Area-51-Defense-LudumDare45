@@ -11,6 +11,7 @@ public class GunBasic : MonoBehaviour
     public GameObject gunTip;
     public Sprite ammoSprite;
     public bool isRock;
+    public string fireAudio;
 
     public Player playerHand;
 
@@ -59,6 +60,8 @@ public class GunBasic : MonoBehaviour
             bulletFired.GetComponent<SpriteRenderer>().sprite = ammoSprite;
             bulletFired.tag = "FriendlyBullet";
             bulletFired.GetComponent<BasicBullet>().damage = damage;
+            AudioClip audio = Resources.Load<AudioClip>(fireAudio);
+            this.GetComponent<AudioSource>().PlayOneShot(audio);
             if (isRock)
             {
                 bulletFired.transform.localScale = new Vector3(0.1f,0.1f,1f);
