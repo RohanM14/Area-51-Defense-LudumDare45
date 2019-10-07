@@ -25,7 +25,6 @@ public class EnemySpawnManager : MonoBehaviour
         {
             timeBeforeNextSpawn[i] = Random.Range(0f, 2f);
         }
-        StartCoroutine(GameObject.Find("Canvas").GetComponent<EndGameCanvasController>().endGame(true));
     }
 
     // Update is called once per frame
