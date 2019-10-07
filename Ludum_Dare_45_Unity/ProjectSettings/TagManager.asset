@@ -9,6 +9,7 @@ TagManager:
   - FriendlyBullet
   - BasicBullet
   - Target
+  - FriendlyExplosion
   layers:
   - Default
   - TransparentFX

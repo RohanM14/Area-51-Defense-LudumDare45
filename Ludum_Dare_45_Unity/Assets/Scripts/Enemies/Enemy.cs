@@ -67,6 +67,7 @@ public class Enemy : MonoBehaviour
     private void kill()
     {
         //Add money
+        UpgradeManager.money += cashValue;
 
         //Disable movement
         //Disable attacks
@@ -75,7 +76,7 @@ public class Enemy : MonoBehaviour
         alive = false;
 
         //Disable trigger boxes
-        //GetComponent<Collider2D>().disable
+        GetComponent<Collider2D>().enabled = false;
 
     }
 
@@ -94,11 +95,16 @@ public class Enemy : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "FriendlyBullet")
+        if (collision.gameObject.tag == "FriendlyBullet")
         {
             BasicBullet bullet = collision.GetComponent<BasicBullet>();
             hurt((int) bullet.damage);
-            Destroy(collision);
+            Destroy(collision.gameObject);
+        } else if (collision.gameObject.tag == "FriendlyExplosion")
+        {
+            explosion explosionObj = collision.GetComponent<explosion>();
+            hurt((int)explosionObj.damage);
+            Destroy(collision.gameObject);
         }
     }
 }

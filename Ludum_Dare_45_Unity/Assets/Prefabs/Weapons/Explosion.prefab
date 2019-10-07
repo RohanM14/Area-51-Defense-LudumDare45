@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1297239827225701815}
   - component: {fileID: 6959224119806197045}
   - component: {fileID: 8279400047856215035}
+  - component: {fileID: -3964727336551779723}
   m_Layer: 0
   m_Name: Explosion
-  m_TagString: FriendlyBullet
+  m_TagString: FriendlyExplosion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,3 +117,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &-3964727336551779723
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297239827225701808}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.9221127, y: -5.387041}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 22.506668, y: 16.880001}
+    newSize: {x: 22.506668, y: 16.880001}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10.179577, y: 10.764996}
+  m_EdgeRadius: 0
