@@ -46,14 +46,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c50ed63f03a84f9fb2bb294abb321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
-  fireTime: 0.05
+  damage: 1
+  fireTime: 0.15
   xShootRange: -7
   bullet: {fileID: 622649067270377698, guid: 6583c9a577fee2a488e54a12a3cbd7d7, type: 3}
   gunTip: {fileID: 3858229065443346985}
   ammoSprite: {fileID: 21300000, guid: a6bcedb53cc6638409875b9286d6d13c, type: 3}
   isRock: 0
   fireAudio: gun_semi_auto_rifle_shot_01
+  playerHand: {fileID: 0}
 --- !u!82 &8771601103036410221
 AudioSource:
   m_ObjectHideFlags: 0

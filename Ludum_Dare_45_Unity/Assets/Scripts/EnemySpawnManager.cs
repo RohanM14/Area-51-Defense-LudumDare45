@@ -33,6 +33,7 @@ public class EnemySpawnManager : MonoBehaviour
         {
             timeBeforeNextSpawn[i] = Random.Range(0f, 2f);
         }
+        setupWave(4);
     }
 
     // Update is called once per frame

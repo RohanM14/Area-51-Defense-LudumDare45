@@ -45,6 +45,12 @@ public class SceneTransition : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        if (scene.name.Equals("SampleScene"))
+        {
+            Debug.Log("Scene is recognized");
+            GameObject spawnZone = GameObject.Find("EnemySpawnZone");
+            spawnZone.GetComponent<EnemySpawnManager>().setupWave(UpgradeManager.currentWave);
+        }
         SceneManager.sceneLoaded -= OnSceneLoaded;
         StartCoroutine(Fade(FadeDirection.In));
         flash.localScale = new Vector3(0, 0, 0);
