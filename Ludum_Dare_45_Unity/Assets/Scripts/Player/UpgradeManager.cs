@@ -8,7 +8,6 @@ public class UpgradeManager : MonoBehaviour
 
     int currentWave;
     public static int money;
-    public static int[] upgrades = new int[9];
     public static string gun1Level = "tempRock";
     int[] upgrades;
     private static int gun1 = 1;
