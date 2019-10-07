@@ -97,6 +97,7 @@ public class EnemySpawnManager : MonoBehaviour
         {
             //Finish
             Debug.Log("GAME FINISHED");
+            StartCoroutine(GameObject.Find("Canvas").GetComponent<EndGameCanvasController>().endGame(true));
         }
         
     }

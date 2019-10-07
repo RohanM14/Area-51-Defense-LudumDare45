@@ -47,9 +47,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 4282651753
+    locked: 0
   - name: Enemies
     uniqueID: 2628594135
     locked: 0
-  - name: Background
-    uniqueID: 4282651753
+  - name: Fade Effect
+    uniqueID: 4280121345
     locked: 0

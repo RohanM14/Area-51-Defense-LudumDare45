@@ -12,13 +12,11 @@ public class UpgradeManager : MonoBehaviour
     int[] upgrades;
 
     private static int gun1 = 1;
-   
 
     // Start is called before the first frame update
     void Start()
     {
         currentWave = 1;
-        upgrades = new int[9];
     }
 
     // upgrades levels based off input from upgradebuttons
@@ -43,15 +41,6 @@ public class UpgradeManager : MonoBehaviour
         return upgrades;
     }
 
-    public void IncreaseMoney(int sum)
-    {
-        money += sum;
-    }
-
-    public int GetMoney()
-    {
-        return money;
-    }
     public void Upgrade(int slot)
     {
         upgrades[slot] = upgrades[slot] + 1;
