@@ -58,7 +58,8 @@ public class EnemySpawnManager : MonoBehaviour
     {
         Vector3 positionToSpawn = transform.position;
         positionToSpawn.y += Random.Range(0f, 5f);
-        Instantiate(enemyToSpawn, positionToSpawn, transform.rotation);
+        GameObject enemy = Instantiate(enemyToSpawn, positionToSpawn, transform.rotation);
+        enemy.GetComponent<SpriteRenderer>().sortingOrder = -(int)(positionToSpawn.y * 10);
     }
 
 }
