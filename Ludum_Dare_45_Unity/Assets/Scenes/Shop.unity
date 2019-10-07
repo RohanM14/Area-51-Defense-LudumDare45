@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 221930386}
   - component: {fileID: 221930388}
   - component: {fileID: 221930387}
+  - component: {fileID: 221930389}
   m_Layer: 5
   m_Name: UpgradeLevel4
   m_TagString: Untagged
@@ -193,6 +194,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221930385}
   m_CullTransparentMesh: 0
+--- !u!114 &221930389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221930385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a917e04f905397499a9d6180761ed42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 819afbefc73a53d43af934852db11288, type: 3}
+  - {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
+  - {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
+  - {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
 --- !u!1 &291718501
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,6 +885,7 @@ GameObject:
   - component: {fileID: 616087273}
   - component: {fileID: 616087275}
   - component: {fileID: 616087274}
+  - component: {fileID: 616087276}
   m_Layer: 5
   m_Name: UpgradeLevel1
   m_TagString: Untagged
@@ -929,6 +948,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 616087272}
   m_CullTransparentMesh: 0
+--- !u!114 &616087276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616087272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a917e04f905397499a9d6180761ed42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 819afbefc73a53d43af934852db11288, type: 3}
+  - {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
+  - {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
+  - {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
 --- !u!1 &620679756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,6 +1344,7 @@ GameObject:
   - component: {fileID: 729884991}
   - component: {fileID: 729884993}
   - component: {fileID: 729884992}
+  - component: {fileID: 729884994}
   m_Layer: 5
   m_Name: UpgradeLevel7
   m_TagString: Untagged
@@ -1370,6 +1407,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729884990}
   m_CullTransparentMesh: 0
+--- !u!114 &729884994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729884990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a917e04f905397499a9d6180761ed42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 819afbefc73a53d43af934852db11288, type: 3}
+  - {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
+  - {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
+  - {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
 --- !u!1 &800739497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1947,6 +2001,7 @@ GameObject:
   - component: {fileID: 1182026725}
   - component: {fileID: 1182026727}
   - component: {fileID: 1182026726}
+  - component: {fileID: 1182026728}
   m_Layer: 5
   m_Name: UpgradeLevel2
   m_TagString: Untagged
@@ -2009,6 +2064,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182026724}
   m_CullTransparentMesh: 0
+--- !u!114 &1182026728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182026724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a917e04f905397499a9d6180761ed42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 819afbefc73a53d43af934852db11288, type: 3}
+  - {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
+  - {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
+  - {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
 --- !u!1 &1276153671
 GameObject:
   m_ObjectHideFlags: 0
@@ -2413,6 +2485,7 @@ GameObject:
   - component: {fileID: 1520582025}
   - component: {fileID: 1520582027}
   - component: {fileID: 1520582026}
+  - component: {fileID: 1520582028}
   m_Layer: 5
   m_Name: UpgradeLevel5
   m_TagString: Untagged
@@ -2475,6 +2548,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520582024}
   m_CullTransparentMesh: 0
+--- !u!114 &1520582028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520582024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a917e04f905397499a9d6180761ed42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 819afbefc73a53d43af934852db11288, type: 3}
+  - {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
+  - {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
+  - {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
 --- !u!1 &1571329659
 GameObject:
   m_ObjectHideFlags: 0
@@ -2960,6 +3050,7 @@ GameObject:
   - component: {fileID: 1835020421}
   - component: {fileID: 1835020423}
   - component: {fileID: 1835020422}
+  - component: {fileID: 1835020424}
   m_Layer: 5
   m_Name: UpgradeLevel9
   m_TagString: Untagged
@@ -3022,6 +3113,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835020420}
   m_CullTransparentMesh: 0
+--- !u!114 &1835020424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835020420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a917e04f905397499a9d6180761ed42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 819afbefc73a53d43af934852db11288, type: 3}
+  - {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
+  - {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
+  - {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
 --- !u!1 &1902281612
 GameObject:
   m_ObjectHideFlags: 0
@@ -3033,6 +3141,7 @@ GameObject:
   - component: {fileID: 1902281613}
   - component: {fileID: 1902281615}
   - component: {fileID: 1902281614}
+  - component: {fileID: 1902281616}
   m_Layer: 5
   m_Name: UpgradeLevel6
   m_TagString: Untagged
@@ -3095,6 +3204,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1902281612}
   m_CullTransparentMesh: 0
+--- !u!114 &1902281616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902281612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a917e04f905397499a9d6180761ed42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 819afbefc73a53d43af934852db11288, type: 3}
+  - {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
+  - {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
+  - {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
 --- !u!1 &1908192258
 GameObject:
   m_ObjectHideFlags: 0
@@ -3243,6 +3369,7 @@ GameObject:
   - component: {fileID: 1941038852}
   - component: {fileID: 1941038854}
   - component: {fileID: 1941038853}
+  - component: {fileID: 1941038855}
   m_Layer: 5
   m_Name: UpgradeLevel8
   m_TagString: Untagged
@@ -3305,6 +3432,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941038851}
   m_CullTransparentMesh: 0
+--- !u!114 &1941038855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941038851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a917e04f905397499a9d6180761ed42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 819afbefc73a53d43af934852db11288, type: 3}
+  - {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
+  - {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
+  - {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
 --- !u!1 &1999542808
 GameObject:
   m_ObjectHideFlags: 0
@@ -3473,6 +3617,7 @@ GameObject:
   - component: {fileID: 2144704429}
   - component: {fileID: 2144704431}
   - component: {fileID: 2144704430}
+  - component: {fileID: 2144704432}
   m_Layer: 5
   m_Name: UpgradeLevel3
   m_TagString: Untagged
@@ -3535,3 +3680,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2144704428}
   m_CullTransparentMesh: 0
+--- !u!114 &2144704432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144704428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a917e04f905397499a9d6180761ed42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 819afbefc73a53d43af934852db11288, type: 3}
+  - {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
+  - {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
+  - {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
