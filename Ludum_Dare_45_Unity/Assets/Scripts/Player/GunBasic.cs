@@ -9,6 +9,8 @@ public class GunBasic : MonoBehaviour
     public float xShootRange; //The x position to stop rotating the gun
     public GameObject bullet;
     public GameObject gunTip;
+    public Sprite ammoSprite;
+    public bool isRock;
 
 
     private float shotTimer;
@@ -51,7 +53,13 @@ public class GunBasic : MonoBehaviour
             shotTimer = 0;
             //Shoot a bullet
             GameObject bulletFired = Instantiate(bullet, gunTip.transform.position, transform.rotation);
+            bulletFired.GetComponent<SpriteRenderer>().sprite = ammoSprite;
             bulletFired.tag = "FriendlyBullet";
+            bulletFired.GetComponent<BasicBullet>().damage = damage;
+            if (isRock)
+            {
+                bulletFired.transform.localScale = new Vector3(0.1f,0.1f,1f);
+            }
         }
         shotTimer += Time.deltaTime;
     }

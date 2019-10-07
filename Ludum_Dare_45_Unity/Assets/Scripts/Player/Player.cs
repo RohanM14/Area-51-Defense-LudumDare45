@@ -43,8 +43,7 @@ public class Player : MonoBehaviour
         //Update crosshair
         crosshair.transform.position = mousePos;
 
-        changeGun("1", "tempGun");
-        changeGun("2", "tempAR");
+        changeGun("1", UpgradeManager.gun1Level);
         changeGun("3", "WalkieTalkie");
     }
 

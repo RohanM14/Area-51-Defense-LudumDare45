@@ -13,6 +13,7 @@ public class UpgradeButtons : MonoBehaviour
     public Sprite sprite1;
     public Sprite sprite2;
     public Sprite sprite3;
+    public string upgradedItem;
 
     private int currentMoney;
 
@@ -70,18 +71,21 @@ public class UpgradeButtons : MonoBehaviour
             text.text = "$300";
             UpgradeManager.money = currentMoney - 100;
             level.GetComponent<Image>().sprite = sprite1;
+            UpgradeManager.upgradeWeapon(upgradedItem);
         }
         else if (text.text.Equals("$300") && currentMoney >= 300)
         {
             text.text = "$500";
             UpgradeManager.money = currentMoney - 300;
             level.GetComponent<Image>().sprite = sprite2;
+            UpgradeManager.upgradeWeapon(upgradedItem);
         }
         else if (text.text.Equals("$500") && currentMoney >= 500)
         {
             text.text = "Max";
             UpgradeManager.money = currentMoney - 500;
             level.GetComponent<Image>().sprite = sprite3;
+            UpgradeManager.upgradeWeapon(upgradedItem);
             button.interactable = false;
         }
     }
