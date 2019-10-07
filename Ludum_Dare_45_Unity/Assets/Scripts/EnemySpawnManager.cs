@@ -13,7 +13,12 @@ public class EnemySpawnManager : MonoBehaviour
     private List<GameObject> enemies;
 
     //Hard coded waves
-    private float[] wave1 = {3,0};
+    private int[] wave1 = {3,0};
+    private int[] wave2 = { 6, 3 };
+    private int[] wave3 = { };
+
+    private float[] waveNBase = {4,3 };
+    private int[] waveN;
     
     // Start is called before the first frame update
     void Start()
@@ -47,6 +52,30 @@ public class EnemySpawnManager : MonoBehaviour
                 }
                 break;
             case 2:
+                for (int i = 0; i < enemyPrefabs.Length; i++)
+                {
+                    if (enemySpawnTimers[i] >= timeBeforeNextSpawn[i] && wave2[i] > 0)
+                    {
+                        spawnEnemy(enemyPrefabs[i]);
+                        wave2[i] -= 1;
+                        timeBeforeNextSpawn[i] = Random.Range(2f, Random.Range(2f, 10f));
+                        enemySpawnTimers[i] = 0;
+                    }
+                    enemySpawnTimers[i] += Time.deltaTime;
+                }
+                break;
+            case 3:
+                for (int i = 0; i < enemyPrefabs.Length; i++)
+                {
+                    if (enemySpawnTimers[i] >= timeBeforeNextSpawn[i] && wave1[i] > 0)
+                    {
+                        spawnEnemy(enemyPrefabs[i]);
+                        wave1[i] -= 1;
+                        timeBeforeNextSpawn[i] = Random.Range(5f, Random.Range(5f, 10f));
+                        enemySpawnTimers[i] = 0;
+                    }
+                    enemySpawnTimers[i] += Time.deltaTime;
+                }
                 break;
             default:
                 break;
