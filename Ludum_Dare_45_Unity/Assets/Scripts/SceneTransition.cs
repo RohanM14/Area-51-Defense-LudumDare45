@@ -7,7 +7,7 @@ public class SceneTransition : MonoBehaviour
 {
     private Transform flash;
     private SpriteRenderer fadeOutUIImage;
-    private float fadeSpeed = 5f;
+    private float fadeSpeed = 1.5f;
     private Quaternion endRotation = Quaternion.Euler(0, 0, 0);
     public enum FadeDirection
     {
