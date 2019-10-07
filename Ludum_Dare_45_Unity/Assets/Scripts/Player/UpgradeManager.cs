@@ -5,7 +5,6 @@ using UnityEngine;
 public class UpgradeManager : MonoBehaviour
 {
 
-
     int currentWave;
     public static int money;
     public static int[] upgrades = new int[9];
@@ -15,6 +14,7 @@ public class UpgradeManager : MonoBehaviour
     void Start()
     {
         currentWave = 1;
+        DontDestroyOnLoad(this.gameObject);
     }
 
     public int[] GetUpgrades()
