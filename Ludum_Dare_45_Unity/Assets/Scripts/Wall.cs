@@ -29,7 +29,7 @@ public class Wall : MonoBehaviour
             Destroy(collider);
             if (health <= 0)
             {
-                Destroy(gameObject);
+                Destroy(gameObject, 0.1f);
             }
 
         }
