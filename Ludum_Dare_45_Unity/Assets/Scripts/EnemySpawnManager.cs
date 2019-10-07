@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class EnemySpawnManager : MonoBehaviour
 {
+
     int wave = 1;
     public GameObject[] enemyPrefabs;
     private float[] timeBeforeNextSpawn;
     private float[] enemySpawnTimers;
+
+    private List<GameObject> enemies;
 
     //Hard coded waves
     private float[] wave1 = {3,0};
@@ -15,6 +18,7 @@ public class EnemySpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        enemies = new List<GameObject>();
         timeBeforeNextSpawn = new float[enemyPrefabs.Length];
         enemySpawnTimers = new float[enemyPrefabs.Length];
         for (int i = 0; i < enemyPrefabs.Length; i++)
@@ -35,7 +39,7 @@ public class EnemySpawnManager : MonoBehaviour
                     if (enemySpawnTimers[i] >= timeBeforeNextSpawn[i] && wave1[i] > 0)
                     {
                         spawnEnemy(enemyPrefabs[i]);
-                        wave1[i]--;
+                        wave1[i] -= 1;
                         timeBeforeNextSpawn[i] = Random.Range(5f, Random.Range(5f,10f));
                         enemySpawnTimers[i] = 0;
                     }
@@ -69,7 +73,32 @@ public class EnemySpawnManager : MonoBehaviour
         // y=mx+b, b = 0.25
         float scale = -0.0641f * positionToSpawn.y + 0.25f;
         enemy.transform.localScale = new Vector3(scale, scale, 1);
+        enemy.GetComponent<Enemy>().spawnManager = this;
 
+        enemies.Add(enemy);
+    }
+
+    public void enemyDie(GameObject enemy)
+    {
+        enemies.Remove(enemy);
+        bool finishedGame = true;
+        if (enemies.Count > 0)
+        {
+            finishedGame = false;
+        }
+        else
+        {
+            for (int i = 0; i < wave1.Length; i++)
+            {
+                if (wave1[i] > 0) finishedGame = false;
+            }
+        }
+        if (finishedGame)
+        {
+            //Finish
+            Debug.Log("GAME FINISHED");
+        }
+        
     }
 
 }
