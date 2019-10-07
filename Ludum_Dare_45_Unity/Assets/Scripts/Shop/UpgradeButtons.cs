@@ -13,6 +13,7 @@ public class UpgradeButtons : MonoBehaviour
     public Sprite sprite1;
     public Sprite sprite2;
     public Sprite sprite3;
+    public string upgradedItem;
 
     // Start is called before the first frame update
     void Start()
@@ -66,21 +67,21 @@ public class UpgradeButtons : MonoBehaviour
             text.text = "$300";
             UpgradeManager.money -= 100;
             level.GetComponent<Image>().sprite = sprite1;
-            UpgradeManager.upgrades[upgrade] += 1;
+            UpgradeManager.upgradeWeapon(upgradedItem);
         }
         else if (text.text.Equals("$300") && UpgradeManager.money >= 300)
         {
             text.text = "$500";
             UpgradeManager.money -= 300;
             level.GetComponent<Image>().sprite = sprite2;
-            UpgradeManager.upgrades[upgrade] += 1;
+            UpgradeManager.upgradeWeapon(upgradedItem);
         }
         else if (text.text.Equals("$500") && UpgradeManager.money >= 500)
         {
             text.text = "Max";
             UpgradeManager.money -= 500;
             level.GetComponent<Image>().sprite = sprite3;
-            UpgradeManager.upgrades[upgrade] += 1;
+            UpgradeManager.upgradeWeapon(upgradedItem);
             button.interactable = false;
         }
     }

@@ -8,12 +8,36 @@ public class UpgradeManager : MonoBehaviour
 
     int currentWave;
     public static int money;
+<<<<<<< HEAD
     public static int[] upgrades = new int[9];
+=======
+    public static string gun1Level = "tempRock";
+    int[] upgrades;
+
+    private static int gun1 = 1;
+>>>>>>> 5159e69ff24e6d6be1508bd389a163f246c625fd
 
     // Start is called before the first frame update
     void Start()
     {
         currentWave = 1;
+    }
+
+    // upgrades levels based off input from upgradebuttons
+    public static void upgradeWeapon(string upgradedItem)
+    {
+        if (upgradedItem == "gun1Level")
+        {
+            gun1 += 2;
+            if (gun1 == 2)
+            {
+                gun1Level = "testGun";
+            }
+            else if (gun1 == 3)
+            {
+                gun1Level = "testAR";
+            }
+        }
     }
 
     public int[] GetUpgrades()

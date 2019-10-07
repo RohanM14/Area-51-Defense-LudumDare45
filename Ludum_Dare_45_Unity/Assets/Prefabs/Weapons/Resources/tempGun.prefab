@@ -45,11 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2c50ed63f03a84f9fb2bb294abb321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 2
   fireTime: 1
   xShootRange: -7
   bullet: {fileID: 622649067270377698, guid: 6583c9a577fee2a488e54a12a3cbd7d7, type: 3}
   gunTip: {fileID: 5418653139207075211}
+  ammoSprite: {fileID: 21300000, guid: a6bcedb53cc6638409875b9286d6d13c, type: 3}
 --- !u!1 &5418653139207075211
 GameObject:
   m_ObjectHideFlags: 0

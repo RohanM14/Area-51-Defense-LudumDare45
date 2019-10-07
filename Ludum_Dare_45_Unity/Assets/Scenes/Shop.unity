@@ -562,6 +562,7 @@ MonoBehaviour:
   sprite1: {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
   sprite2: {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
   sprite3: {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
+  upgradedItem: 
 --- !u!1 &456487444
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +699,7 @@ MonoBehaviour:
   sprite1: {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
   sprite2: {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
   sprite3: {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
+  upgradedItem: 
 --- !u!1 &586916073
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,6 +836,7 @@ MonoBehaviour:
   sprite1: {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
   sprite2: {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
   sprite3: {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
+  upgradedItem: 
 --- !u!1 &616087272
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,6 +1200,7 @@ MonoBehaviour:
   sprite1: {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
   sprite2: {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
   sprite3: {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
+  upgradedItem: 
 --- !u!1 &729884990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,6 +1564,7 @@ MonoBehaviour:
   sprite1: {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
   sprite2: {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
   sprite3: {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
+  upgradedItem: 
 --- !u!1 &1060475229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1952,6 +1957,7 @@ MonoBehaviour:
   sprite1: {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
   sprite2: {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
   sprite3: {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
+  upgradedItem: 
 --- !u!1 &1463909305
 GameObject:
   m_ObjectHideFlags: 0
@@ -2238,6 +2244,7 @@ MonoBehaviour:
   sprite1: {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
   sprite2: {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
   sprite3: {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
+  upgradedItem: 
 --- !u!1 &1584193371
 GameObject:
   m_ObjectHideFlags: 0
@@ -2451,6 +2458,7 @@ MonoBehaviour:
   sprite1: {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
   sprite2: {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
   sprite3: {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
+  upgradedItem: 
 --- !u!1 &1774571033
 GameObject:
   m_ObjectHideFlags: 0
@@ -2810,6 +2818,7 @@ MonoBehaviour:
   sprite1: {fileID: 21300000, guid: 1aa866520d7595f4b9ea601058787b2e, type: 3}
   sprite2: {fileID: 21300000, guid: 5a7b3f234b1251a428e1050962894037, type: 3}
   sprite3: {fileID: 21300000, guid: 3a21a861e47e48343b9a8f7a5d5c655b, type: 3}
+  upgradedItem: gun1Level
 --- !u!1 &1941038851
 GameObject:
   m_ObjectHideFlags: 0
