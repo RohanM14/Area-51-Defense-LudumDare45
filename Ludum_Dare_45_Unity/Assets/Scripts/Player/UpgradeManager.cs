@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
-<<<<<<< HEAD
+
     int currentWave;
     int money;
     int[] upgrades;
-=======
-    public static int currentWave;
-    public static int money;
-    public static int[] upgrades;
->>>>>>> 1ce3ed6e873104e64c0f73b39c38eedcb6a34a1f
 
     // Start is called before the first frame update
     void Start()

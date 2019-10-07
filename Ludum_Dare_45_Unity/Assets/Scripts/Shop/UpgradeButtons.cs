@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class UpgradeButtons : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class UpgradeButtons : MonoBehaviour
 
     void TaskOnClick()
     {
+        Vector2 thisPosition = EventSystem.current.currentSelectedGameObject.GetComponent<Transform>().localPosition;
+        Debug.Log(thisPosition);
         Text text = GetComponentInChildren<Text>();
         if (text.text.Equals("$100"))
         {
