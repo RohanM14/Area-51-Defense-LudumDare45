@@ -19,6 +19,8 @@ public class EndGameCanvasController : MonoBehaviour
     }
     private IEnumerator GlideIn(GameObject screen, int direction)
     {
+        Cursor.visible = true;
+        GameObject.Find("Crosshair 1(clone)").SetActive(false);
         RectTransform rectT = screen.GetComponent<RectTransform>();
         while (rectT.localPosition.y != 0f)
         {

@@ -96,6 +96,7 @@ public class SceneTransition : MonoBehaviour
     #region HELPERS
     public IEnumerator FadeAndLoadScene(FadeDirection fadeDirection, string sceneToLoad)
     {
+        Cursor.visible = true;
         yield return Fade(fadeDirection);
         SceneManager.LoadScene(sceneToLoad);
     }
