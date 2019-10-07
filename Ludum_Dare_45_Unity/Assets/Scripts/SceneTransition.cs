@@ -113,6 +113,10 @@ public class SceneTransition : MonoBehaviour
     }
     #endregion
 
+    public void quitGame()
+    {
+        Application.Quit();
+    }
 
 
 }
