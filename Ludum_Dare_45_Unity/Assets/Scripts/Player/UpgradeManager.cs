@@ -7,7 +7,7 @@ public class UpgradeManager : MonoBehaviour
 
 
     int currentWave;
-    public static int money = 1000;
+    public static int money;
     public static int[] upgrades = new int[9];
 
     // Start is called before the first frame update
