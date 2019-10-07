@@ -98,6 +98,7 @@ public class Enemy : MonoBehaviour
             GameObject bulletFired = Instantiate(bullet, transform.position, Quaternion.Euler(0,0,transform.rotation.eulerAngles.z-180));
             bulletFired.tag = "BasicBullet";
             bulletFired.GetComponent<BasicBullet>().damage = attackDamage;
+            if (attackRange <= 1) bulletFired.GetComponent<SpriteRenderer>().enabled = false;
         }
     }
 
