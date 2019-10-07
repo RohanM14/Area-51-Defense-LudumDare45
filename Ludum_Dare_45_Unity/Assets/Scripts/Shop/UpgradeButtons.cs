@@ -25,37 +25,41 @@ public class UpgradeButtons : MonoBehaviour
     {
         Vector2 thisPosition = EventSystem.current.currentSelectedGameObject.GetComponent<Transform>().localPosition;
         Debug.Log(thisPosition);
-        switch (thisPosition.y)
+        if (thisPosition.y > 70F)
         {
-            case 79.4F:
-                upgrade = 1;
-                break;
-            case 56.5F:
-                upgrade = 2;
-                break;
-            case 31.6F:
-                upgrade = 3;
-                break;
-            case 4.2F:
-                upgrade = 4;
-                break;
-            case -18.9F:
-                upgrade = 5;
-                break;
-            case -42.1F:
-                upgrade = 6;
-                break;
-            case -70.3F:
-                upgrade = 7;
-                break;
-            case -95.3F:
-                upgrade = 8;
-                break;
-            case -120.4F:
-                upgrade = 9;
-                break;
-            default:
-                break;
+            upgrade = 1;
+        }
+        else if (thisPosition.y > 50)
+        {
+            upgrade = 2;
+        }
+        else if (thisPosition.y > 30)
+        {
+            upgrade = 3;
+        }
+        else if (thisPosition.y > 0)
+        {
+            upgrade = 4;
+        }
+        else if (thisPosition.y > -20)
+        {
+            upgrade = 5;
+        }
+        else if (thisPosition.y > -45)
+        {
+            upgrade = 6;
+        }
+        else if (thisPosition.y > -80)
+        {
+            upgrade = 7;
+        }
+        else if (thisPosition.y > -100)
+        {
+            upgrade = 8;
+        }
+        else if (thisPosition.y > -130)
+        {
+            upgrade = 9;
         }
         Text text = GetComponentInChildren<Text>();
         if (text.text.Equals("$100"))
