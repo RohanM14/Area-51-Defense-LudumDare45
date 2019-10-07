@@ -35,14 +35,15 @@ public class Enemy : MonoBehaviour
         if (alive)
         {
             // Moves the enemy left at speed.
-            if (transform.position.x - wallCoord >= movementRange)
+            float wallDistance = (Mathf.Lerp(-6.45f, -5.06f, (transform.position.y + 5.61f) / (-1.96f + 5.61f)));
+            if (transform.position.x >= wallDistance + .3)
             {
                 Vector3 temp = new Vector3(speed, 0, 0);
                 transform.position -= temp;
             }
 
             // if within firing range, starts firing.
-            if (transform.position.x - wallCoord < attackRange)
+            if (transform.position.x <= wallDistance + attackRange)
             {
                 handleShooting();
             }

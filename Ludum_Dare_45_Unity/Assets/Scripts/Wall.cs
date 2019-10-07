@@ -5,6 +5,9 @@ using UnityEngine;
 public class Wall : MonoBehaviour
 {
     public float health;
+    public Sprite fence;
+    public Sprite concrete;
+    public Sprite alien;
 
     // Start is called before the first frame update
     void Start()
@@ -12,8 +15,16 @@ public class Wall : MonoBehaviour
         int level = UpgradeManager.upgrades[6];
         switch(level) {
             case 0:
+                this.GetComponent<SpriteRenderer>().sprite = null;
                 break;
             case 1:
+                this.GetComponent<SpriteRenderer>().sprite = fence;
+                break;
+            case 2:
+                this.GetComponent<SpriteRenderer>().sprite = concrete;
+                break;
+            case 3:
+                this.GetComponent<SpriteRenderer>().sprite = alien;
                 break;
         }
     }
