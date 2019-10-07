@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
-    public static int currentWave;
+
+
+    int currentWave;
     public static int money;
-    public static int[] upgrades;
+    int[] upgrades;
 
     // Start is called before the first frame update
     void Start()
