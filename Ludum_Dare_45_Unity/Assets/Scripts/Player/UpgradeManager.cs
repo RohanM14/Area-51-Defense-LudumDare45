@@ -7,15 +7,13 @@ public class UpgradeManager : MonoBehaviour
 
 
     int currentWave;
-    public static int money;
-    int[] upgrades;
+    public static int money = 1000;
+    public static int[] upgrades = new int[9];
 
     // Start is called before the first frame update
     void Start()
     {
         currentWave = 1;
-        money = 0;
-        upgrades = new int[9];
     }
 
     public int[] GetUpgrades()
@@ -23,15 +21,6 @@ public class UpgradeManager : MonoBehaviour
         return upgrades;
     }
 
-    public void IncreaseMoney(int sum)
-    {
-        money += sum;
-    }
-
-    public int GetMoney()
-    {
-        return money;
-    }
     public void Upgrade(int slot)
     {
         upgrades[slot] = upgrades[slot] + 1;
