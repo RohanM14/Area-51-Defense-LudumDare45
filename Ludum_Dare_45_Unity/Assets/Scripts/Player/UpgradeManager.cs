@@ -17,7 +17,7 @@ public class UpgradeManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public int[] GetUpgrades()
+    public static int[] GetUpgrades()
     {
         return upgrades;
     }

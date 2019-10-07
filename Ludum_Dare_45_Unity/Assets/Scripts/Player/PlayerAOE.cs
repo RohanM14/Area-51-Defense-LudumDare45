@@ -33,7 +33,7 @@ public class PlayerAOE : MonoBehaviour
             plane.GetComponent<Airplane>().crosshair = copyCrosshair;
 
             //Change back to another weapon
-            player.spawnGun("1", player.gunOptions[UpgradeManager.upgrades[0]]);
+            player.spawnGun("1", player.gunOptions[UpgradeManager.GetUpgrades()[0]]);
         }
     }
 }
