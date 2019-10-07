@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     public float speed;
 
     private float shotTimer = 0;
-    private bool alive;
+    private bool alive = true;
     public GameObject bullet;
     float wallCoord = -6.85F;
 
@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour
 
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, -90), 0.2f);
 
-            //When animation is done, Destroy object
+            if (transform.rotation.eulerAngles.z <= -88 && otherValues <= 10) Destroy(this); //get rid of the script
         }
         
     }
@@ -71,7 +71,7 @@ public class Enemy : MonoBehaviour
         //Disable movement
         //Disable attacks
         //Death animation
-        GetComponent<Animator>().StopPlayback();
+        animator.enabled = false;
         alive = false;
 
         //Disable trigger boxes
@@ -97,7 +97,7 @@ public class Enemy : MonoBehaviour
         if (collision.tag == "FriendlyBullet")
         {
             BasicBullet bullet = collision.GetComponent<BasicBullet>();
-            //hurt(bullet.damage);
+            hurt((int) bullet.damage);
             Destroy(collision);
         }
     }

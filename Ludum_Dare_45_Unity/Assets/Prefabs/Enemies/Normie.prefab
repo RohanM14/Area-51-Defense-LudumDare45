@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 30f523b2969079f4caf179a07e6ba66c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_Size: {x: 3.93, y: 4.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &7799817947548032301
@@ -95,12 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6154274316cb26948b6c6d8f06bee8a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  cashValue: 0
+  health: 3
   attackDamage: 2
   attackRate: 0.5
   attackRange: 1
   movementRange: 1
-  speed: 0.15
+  speed: 0.015
   bullet: {fileID: 622649067270377698, guid: 6583c9a577fee2a488e54a12a3cbd7d7, type: 3}
 --- !u!111 &7799817947548032300
 Animation:
@@ -111,8 +112,9 @@ Animation:
   m_GameObject: {fileID: 7799817948629239968}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
+  m_Animation: {fileID: 7400000, guid: 7d96f2b85faa846499b50a419e22d459, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7d96f2b85faa846499b50a419e22d459, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0

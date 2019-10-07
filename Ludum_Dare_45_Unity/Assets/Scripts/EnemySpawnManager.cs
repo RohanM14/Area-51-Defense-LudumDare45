@@ -57,7 +57,7 @@ public class EnemySpawnManager : MonoBehaviour
     private void spawnEnemy(GameObject enemyToSpawn)
     {
         Vector3 positionToSpawn = transform.position;
-        positionToSpawn.y += Random.Range(0, 5);
+        positionToSpawn.y += Random.Range(0f, 5f);
         Instantiate(enemyToSpawn, positionToSpawn, transform.rotation);
     }
 
