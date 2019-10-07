@@ -16,15 +16,19 @@ public class Wall : MonoBehaviour
         switch(level) {
             case 0:
                 this.GetComponent<SpriteRenderer>().sprite = null;
+                health = 5f;
                 break;
             case 1:
                 this.GetComponent<SpriteRenderer>().sprite = fence;
+                health = 9f;
                 break;
             case 2:
                 this.GetComponent<SpriteRenderer>().sprite = concrete;
+                health = 15f;
                 break;
             case 3:
                 this.GetComponent<SpriteRenderer>().sprite = alien;
+                health = 30f;
                 break;
         }
     }
