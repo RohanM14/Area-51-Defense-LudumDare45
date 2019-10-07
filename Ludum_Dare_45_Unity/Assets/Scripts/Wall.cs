@@ -9,7 +9,13 @@ public class Wall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        int level = UpgradeManager.upgrades[6];
+        switch(level) {
+            case 0:
+                break;
+            case 1:
+                break;
+        }
     }
 
     // Update is called once per frame
