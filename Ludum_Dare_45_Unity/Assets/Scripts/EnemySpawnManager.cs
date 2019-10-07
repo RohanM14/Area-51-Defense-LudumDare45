@@ -25,6 +25,7 @@ public class EnemySpawnManager : MonoBehaviour
     void Start()
     {
         wave = UpgradeManager.currentWave;
+        if (wave == 0) wave = 1; //For testing from battle scene
         enemies = new List<GameObject>();
         timeBeforeNextSpawn = new float[enemyPrefabs.Length];
         enemySpawnTimers = new float[enemyPrefabs.Length];

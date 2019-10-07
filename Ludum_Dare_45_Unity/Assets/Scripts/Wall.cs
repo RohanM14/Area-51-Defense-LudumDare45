@@ -46,6 +46,7 @@ public class Wall : MonoBehaviour
             Destroy(collider);
             if (health <= 0)
             {
+                StartCoroutine(GameObject.Find("Canvas").GetComponent<EndGameCanvasController>().endGame(false));
                 Destroy(gameObject, 0.1f);
             }
 
