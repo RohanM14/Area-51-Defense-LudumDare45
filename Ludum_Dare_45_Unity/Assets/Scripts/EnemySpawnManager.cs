@@ -15,7 +15,7 @@ public class EnemySpawnManager : MonoBehaviour
     //Hard coded waves
     private int[] wave1 = {3,0};
     private int[] wave2 = { 6, 3 };
-    private int[] wave3 = { };
+    private int[] wave3 = { 10, 7};
 
     private float[] waveNBase = {4,3 };
     private float[] waveNTimeScale;
