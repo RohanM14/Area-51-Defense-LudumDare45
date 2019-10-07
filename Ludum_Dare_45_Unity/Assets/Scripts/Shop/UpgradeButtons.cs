@@ -67,21 +67,22 @@ public class UpgradeButtons : MonoBehaviour
             text.text = "$300";
             UpgradeManager.money -= 100;
             level.GetComponent<Image>().sprite = sprite1;
-            UpgradeManager.upgradeWeapon(upgradedItem);
+            UpgradeManager.Upgrade(upgrade);
+            Debug.Log(UpgradeManager.upgrades[upgrade]);
         }
         else if (text.text.Equals("$300") && UpgradeManager.money >= 300)
         {
             text.text = "$1000";
             UpgradeManager.money -= 300;
             level.GetComponent<Image>().sprite = sprite2;
-            UpgradeManager.upgradeWeapon(upgradedItem);
+            UpgradeManager.Upgrade(upgrade);
         }
         else if (text.text.Equals("$1000") && UpgradeManager.money >= 1000)
         {
             text.text = "Max";
             UpgradeManager.money -= 1000;
             level.GetComponent<Image>().sprite = sprite3;
-            UpgradeManager.upgradeWeapon(upgradedItem);
+            UpgradeManager.Upgrade(upgrade);
             button.interactable = false;
         }
     }
