@@ -4,27 +4,33 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
-    int currentWave;
-    int money;
-    int[] upgrades;
-    int wallLevel;
+    public static int currentWave;
+    public static int money;
+    public static int[] upgrades;
 
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
         currentWave = 1;
         money = 0;
         upgrades = new int[9];
-        wallLevel = 0;
     }
 
-    public int[] getUpgrades()
+    public int[] GetUpgrades()
     {
         return upgrades;
     }
 
-    public void upgrade(int slot)
+    public void IncreaseMoney(int sum)
+    {
+        money += sum;
+    }
+
+    public int GetMoney()
+    {
+        return money;
+    }
+    public void Upgrade(int slot)
     {
         upgrades[slot] = upgrades[slot] + 1;
     }
