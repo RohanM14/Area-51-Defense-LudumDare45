@@ -106,7 +106,6 @@ public class Enemy : MonoBehaviour
         {
             explosion explosionObj = collision.GetComponent<explosion>();
             hurt((int)explosionObj.damage);
-            Destroy(collision.gameObject);
         }
     }
 }
