@@ -107,6 +107,11 @@ public class Enemy : MonoBehaviour
         {
             BasicBullet bullet = collision.GetComponent<BasicBullet>();
             hurt((int) bullet.damage);
+
+            // plays hurt sound
+            AudioClip audio = Resources.Load<AudioClip>("bullet_impact_body_flesh_02");
+            this.GetComponent<AudioSource>().PlayOneShot(audio);
+
             Destroy(collision.gameObject);
         } else if (collision.gameObject.tag == "FriendlyExplosion")
         {
