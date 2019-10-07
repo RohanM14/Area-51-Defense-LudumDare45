@@ -18,6 +18,7 @@ public class EnemySpawnManager : MonoBehaviour
     private int[] wave3 = { };
 
     private float[] waveNBase = {4,3 };
+    private float[] waveNTimeScale;
     private int[] waveN;
     
     // Start is called before the first frame update
@@ -67,24 +68,41 @@ public class EnemySpawnManager : MonoBehaviour
             case 3:
                 for (int i = 0; i < enemyPrefabs.Length; i++)
                 {
-                    if (enemySpawnTimers[i] >= timeBeforeNextSpawn[i] && wave1[i] > 0)
+                    if (enemySpawnTimers[i] >= timeBeforeNextSpawn[i] && wave3[i] > 0)
                     {
                         spawnEnemy(enemyPrefabs[i]);
-                        wave1[i] -= 1;
-                        timeBeforeNextSpawn[i] = Random.Range(5f, Random.Range(5f, 10f));
+                        wave3[i] -= 1;
+                        timeBeforeNextSpawn[i] = Random.Range(1f, Random.Range(1f, 10f));
                         enemySpawnTimers[i] = 0;
                     }
                     enemySpawnTimers[i] += Time.deltaTime;
                 }
                 break;
             default:
+                for (int i = 0; i < enemyPrefabs.Length; i++)
+                {
+                    if (enemySpawnTimers[i] >= timeBeforeNextSpawn[i] && waveN[i] > 0)
+                    {
+                        spawnEnemy(enemyPrefabs[i]);
+                        waveN[i] -= 1;
+                        timeBeforeNextSpawn[i] = Random.Range(0f, Random.Range(0f, waveNTimeScale[i]));
+                        enemySpawnTimers[i] = 0;
+                    }
+                    enemySpawnTimers[i] += Time.deltaTime;
+                }
                 break;
         }
     }
 
-    private void getTime()
+    public void setupWave(int wave)
     {
-
+        waveN = new int[waveNBase.Length];
+        waveNTimeScale = new float[waveN.Length];
+        for (int i = 0; i < waveN.Length; i++)
+        {
+            waveN[i] = (int)(waveNBase[i] * wave);
+            waveNTimeScale[i] = 30f / waveN[i];
+        }
     }
 
     private void spawnEnemy(GameObject enemyToSpawn)
