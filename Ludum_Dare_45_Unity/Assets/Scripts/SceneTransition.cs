@@ -49,6 +49,7 @@ public class SceneTransition : MonoBehaviour
         StartCoroutine(Fade(FadeDirection.In));
         flash.localScale = new Vector3(0, 0, 0);
         transform.rotation = Quaternion.Euler(0, 0, 90);
+        Destroy(gameObject, 25f);
     }
 
     private IEnumerator RotateIn()
@@ -86,7 +87,6 @@ public class SceneTransition : MonoBehaviour
             fadeOutUIImage.enabled = true;
             while (alpha >= fadeEndValue)
             {
-                Debug.Log("alpha:" + alpha);
                 SetColorImage(ref alpha, fadeDirection);
                 yield return null;
             }
