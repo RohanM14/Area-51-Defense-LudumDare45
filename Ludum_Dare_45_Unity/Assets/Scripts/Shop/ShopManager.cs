@@ -63,6 +63,12 @@ public class ShopManager : MonoBehaviour
     {
         if (UpgradeManager.money >= buttonCosts[button] && UpgradeManager.GetUpgrades()[button] < 3)
         {
+            if (button == 0 && UpgradeManager.GetUpgrades()[button] == 2)
+                upgradeButtonsFolder.transform.Find("0").GetComponent<Button>().interactable = false;
+            if (button == 3 && UpgradeManager.GetUpgrades()[button] == 0)
+                upgradeButtonsFolder.transform.Find("3").GetComponent<Button>().interactable = false;
+            if (button == 6 && UpgradeManager.GetUpgrades()[button] == 2)
+                upgradeButtonsFolder.transform.Find("6").GetComponent<Button>().interactable = false;
             UpgradeManager.money -= buttonCosts[button];
             UpgradeManager.GetUpgrades()[button] += 1;
             updateGraphics(button);
