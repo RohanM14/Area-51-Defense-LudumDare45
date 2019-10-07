@@ -50,7 +50,8 @@ public class GunBasic : MonoBehaviour
         {
             shotTimer = 0;
             //Shoot a bullet
-            Instantiate(bullet, gunTip.transform.position, transform.rotation);
+            GameObject bulletFired = Instantiate(bullet, gunTip.transform.position, transform.rotation);
+            bulletFired.tag = "FriendlyBullet";
         }
         shotTimer += Time.deltaTime;
     }
