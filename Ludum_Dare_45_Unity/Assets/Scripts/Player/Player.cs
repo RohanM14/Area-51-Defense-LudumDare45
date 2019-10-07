@@ -15,21 +15,25 @@ public class Player : MonoBehaviour
     private float cooldownAOE; //Stored in seconds
     private string currentWeapon;
     public string[] gunOptions = new string[4] { "tempRock", "tempGun", "tempAR", "tempMinigun" };
+    public int[] upgrades;
 
     // Start is called before the first frame update
     void Start()
     {
+        upgrades = UpgradeManager.GetUpgrades();
         cooldownAOE = 0;
         crosshair = Instantiate(crosshair);
         cam = Camera.main;
         Cursor.visible = false;
         crosshair.GetComponent<SpriteRenderer>().sprite = normalSprite;
-        spawnGun("1", gunOptions[UpgradeManager.upgrades[0]]);
+        spawnGun("1", gunOptions[upgrades[0]]);
     }
 
     // Update is called once per frame
     void Update()
     {
+        upgrades = UpgradeManager.GetUpgrades();
+
         //Update AOE cooldown
         if (cooldownAOE > 0)
         {
@@ -45,13 +49,16 @@ public class Player : MonoBehaviour
         //Update crosshair
         crosshair.transform.position = mousePos;
 
-        changeGun("1", gunOptions[UpgradeManager.upgrades[0]]);
+        changeGun("1", gunOptions[upgrades[0]]);
 
-        if (UpgradeManager.upgrades[3] > 0)
+        if (upgrades[3] > 0)
         {
             changeGun("2", "WalkieTalkie");
         }
-        
+
+
+        Debug.Log(upgrades[0]);
+
     }
 
     public void activateAOE()
@@ -76,7 +83,6 @@ public class Player : MonoBehaviour
 
     public void spawnGun(string key, string gunType)
     {
-        Debug.Log(UpgradeManager.upgrades[0]);
 
         // destroys gun
         foreach (Transform child in transform)

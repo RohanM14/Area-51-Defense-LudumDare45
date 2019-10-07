@@ -68,7 +68,7 @@ public class UpgradeButtons : MonoBehaviour
             UpgradeManager.money -= 100;
             level.GetComponent<Image>().sprite = sprite1;
             UpgradeManager.Upgrade(upgrade);
-            Debug.Log(UpgradeManager.upgrades[upgrade]);
+            Debug.Log(UpgradeManager.GetUpgrades()[0]);
         }
         else if (text.text.Equals("$300") && UpgradeManager.money >= 300)
         {

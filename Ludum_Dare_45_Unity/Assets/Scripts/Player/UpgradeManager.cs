@@ -7,7 +7,7 @@ public class UpgradeManager : MonoBehaviour
 
     int currentWave;
     public static int money;
-    public static int[] upgrades = new int[9];
+    private static int[] upgrades = new int[9];
     private static int gun1 = 10;
 
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class UpgradeManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public int[] GetUpgrades()
+    public static int[] GetUpgrades()
     {
         return upgrades;
     }
