@@ -6,6 +6,7 @@ public class BasicBullet : MonoBehaviour
 {
     public float speed;
     public float timeToDie;
+    public float damage;
 
     // Start is called before the first frame update
     void Start()

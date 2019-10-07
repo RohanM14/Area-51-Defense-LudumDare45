@@ -31,6 +31,7 @@ public class PlayerAOE : MonoBehaviour
                 player.crosshair.transform.position, player.crosshair.transform.rotation);
 
             plane.GetComponent<Airplane>().crosshair = copyCrosshair;
+
             //Change back to another weapon
             player.spawnGun("1", "tempGun");
         }

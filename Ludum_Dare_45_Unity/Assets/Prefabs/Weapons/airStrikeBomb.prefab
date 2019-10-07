@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 635317425105126113}
   - component: {fileID: 635317425105126114}
   - component: {fileID: 635317425105126115}
+  - component: {fileID: 1666083785517286964}
   m_Layer: 0
   m_Name: airStrikeBomb
   m_TagString: Untagged
@@ -94,4 +95,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crosshair: {fileID: 0}
+  explosion: {fileID: 1297239827225701808, guid: 47ae28ea5746b5f45be4d71fd27072f8,
+    type: 3}
   speed: 0.5
+--- !u!61 &1666083785517286964
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635317425105126116}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.7105703, y: 0.57497203}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 22.506668, y: 16.880001}
+    newSize: {x: 22.506668, y: 16.880001}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 14.128542, y: 6.530533}
+  m_EdgeRadius: 0

@@ -5,9 +5,9 @@ using UnityEngine;
 public class airRaidBomb : MonoBehaviour
 {
     public GameObject crosshair;
+    public GameObject explosion;
     public float speed;
-    private Player player;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,5 +23,16 @@ public class airRaidBomb : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, crosshair.transform.position, speed);
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameObject collider = collision.gameObject;
+        if (collider.tag == "Target")
+        {
+            Destroy(collider);
+            Instantiate(explosion, transform.position + new Vector3(0, .5f, 0), Quaternion.Euler(Vector3.zero));
+            Destroy(gameObject);
+        }
     }
 }

@@ -10,10 +10,6 @@ public class Enemy : MonoBehaviour
     public float attackRange;
     public float movementRange;
     public float speed;
-    public class damage
-    {
-        public float attackDamage;
-    }
 
     private float shotTimer = 0;
     public GameObject bullet;
@@ -49,8 +45,9 @@ public class Enemy : MonoBehaviour
         {
             shotTimer = 0;
             //Shoot a bullet
-            Instantiate(bullet, transform.position, Quaternion.Euler(0,0,transform.rotation.eulerAngles.z-180)).tag = "BasicBullet";
-            
+            GameObject bulletFired = Instantiate(bullet, transform.position, Quaternion.Euler(0,0,transform.rotation.eulerAngles.z-180));
+            bulletFired.tag = "BasicBullet";
+            bulletFired.GetComponent<BasicBullet>().damage = attackDamage;
         }
     }
 }
